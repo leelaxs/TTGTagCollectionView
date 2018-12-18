@@ -19,7 +19,6 @@
     
     // Alignment
     _tagView.alignment = TTGTagCollectionAlignmentFillByExpandingWidth;
-    
     // Use manual calculate height
     _tagView.manualCalculateHeight = YES;
 }

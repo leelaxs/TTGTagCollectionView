@@ -345,11 +345,15 @@
                 currentLineWidth = maxLineWidth;
                 break;
             case TTGTagCollectionAlignmentFillByExpandingWidth:
+            case TTGTagCollectionAlignmentFillByExpandingAequilateWidth:
             case TTGTagCollectionAlignmentFillByExpandingWidthExceptLastLine:
                 currentLineXOffset = _contentInset.left;
-                currentLineAdditionWidth = (maxLineWidth - currentLineWidth) / (CGFloat)currentLineTagsCount;
-                currentLineWidth = maxLineWidth;
-                
+                if (_alignment == TTGTagCollectionAlignmentFillByExpandingAequilateWidth) {
+                    currentLineAdditionWidth = (maxLineWidth - (_horizontalSpacing*currentLineTagsCount))/(CGFloat)currentLineTagsCount;
+                }else{
+                    currentLineAdditionWidth = (maxLineWidth - currentLineWidth) / (CGFloat)currentLineTagsCount;
+                    currentLineWidth = maxLineWidth;
+                }
                 if (_alignment == TTGTagCollectionAlignmentFillByExpandingWidthExceptLastLine &&
                     currentLine == numberOfLines - 1 &&
                     numberOfLines != 1) {
@@ -370,8 +374,11 @@
             CGPoint origin;
             origin.x = currentLineXOffset + currentLineX;
             origin.y = currentYBase + (currentLineMaxHeight - tagSize.height) / 2;
-            
-            tagSize.width += currentLineAdditionWidth;
+            if (self.alignment == TTGTagCollectionAlignmentFillByExpandingAequilateWidth) {
+                tagSize.width = currentLineAdditionWidth;
+            }else{
+                tagSize.width += currentLineAdditionWidth;
+            }
             if (self.scrollDirection == TTGTagCollectionScrollDirectionVertical && tagSize.width > maxLineWidth) {
                 tagSize.width = maxLineWidth;
             }

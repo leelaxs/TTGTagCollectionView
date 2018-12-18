@@ -1,7 +1,7 @@
 PODS:
   - Masonry (1.1.0)
   - SVPullToRefresh (0.4.1)
-  - TTGTagCollectionView (1.10.0)
+  - TTGTagCollectionView (1.11.0)
 
 DEPENDENCIES:
   - Masonry
@@ -9,7 +9,7 @@ DEPENDENCIES:
   - TTGTagCollectionView (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Masonry
     - SVPullToRefresh
 
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
-  TTGTagCollectionView: e11a88b0a9994feaa7e9b3aaf08cb1df8637a0d6
+  TTGTagCollectionView: 220be9f7ca4b890d98bb4718ae2326bde58372e1
 
 PODFILE CHECKSUM: 3f34e83b6f4309799df1ea5f5543b9ad3372b3a5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

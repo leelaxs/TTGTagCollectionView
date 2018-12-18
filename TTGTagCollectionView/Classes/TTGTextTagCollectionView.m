@@ -618,6 +618,7 @@
         label.selected = !label.selected;
         
         if (self.alignment == TTGTagCollectionAlignmentFillByExpandingWidth ||
+            self.alignment == TTGTagCollectionAlignmentFillByExpandingAequilateWidth ||
             self.alignment == TTGTagCollectionAlignmentFillByExpandingWidthExceptLastLine) {
             [self reload];
         } else {
