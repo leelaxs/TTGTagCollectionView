@@ -349,7 +349,7 @@
             case TTGTagCollectionAlignmentFillByExpandingWidthExceptLastLine:
                 currentLineXOffset = _contentInset.left;
                 if (_alignment == TTGTagCollectionAlignmentFillByExpandingAequilateWidth) {
-                    currentLineAdditionWidth = (maxLineWidth - (_horizontalSpacing*currentLineTagsCount))/(CGFloat)currentLineTagsCount;
+                    currentLineAdditionWidth = (maxLineWidth - (_horizontalSpacing*(currentLineTagsCount-1)))/(CGFloat)currentLineTagsCount;
                 }else{
                     currentLineAdditionWidth = (maxLineWidth - currentLineWidth) / (CGFloat)currentLineTagsCount;
                     currentLineWidth = maxLineWidth;
